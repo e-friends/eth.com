@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all .2s linear;
+}
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #f0f0f0;
+}
+.car{
+    height: 400px;
+    width: 300px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 80px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+.car h3{
+    font-sizE: 40px;
+    padding: 20px 0;
+    color: #444;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.car p{
+    font-size: 15px;
+    color: #888;
+}
+.car button{
+    outline: none;
+    border: none;
+    background: #333;
+    color: #fff;
+    height: 35px;
+    width: 140px;
+    margin-top: 40px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.car button:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+.car::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: rgba(160,160,160,.1);
+    z-index: -1;
+}
+.car::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #e74c3c;
+    z-index: -2;
+    clip-path: circle( 20% at 90% 5%);
+    transition: .2s;
+}
+.car .number{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #fff;
+}
+.car:nth-child(2):after{
+    background: #3498db;
+}
+.car:nth-child(3):after{
+    background: #2ecc71;
+}
+.car:hover::after{
+    clip-path: circle(100%);
+}
+.car:hover p {
+    color: #f0f0f0;
+}
+.car:hover h3 {
+    color: #fff;
+}
+.car:hover button{
+    color: #333;
+    background-color: #fff;
+}
+.car:hover::before{
+    background: rgba(0,0,0,.1)
+}
+
+
+
+
+
+
+
+
+
